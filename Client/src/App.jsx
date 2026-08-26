@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/")
+      .get(`${import.meta.env.VITE_API_URL}/`)
       .then((response) => {
         setMessage(response.data.message);
       })
